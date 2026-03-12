@@ -1,0 +1,64 @@
+# Rami Younes - Git Configuration
+
+[user]
+	name = Rami Younes
+	email = rami.younes@gmail.com
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[core]
+	editor = code --wait
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	side-by-side = true
+	line-numbers = true
+	syntax-theme = Dracula
+
+[diff]
+	algorithm = histogram
+	colorMoved = default
+
+[merge]
+	conflictstyle = zdiff3
+
+[fetch]
+	prune = true
+	prunetags = true
+
+[rebase]
+	autoStash = true
+
+[rerere]
+	enabled = true
+
+[branch]
+	sort = -committerdate
+
+[credential]
+	helper = osxkeychain
+
+[color]
+	ui = auto
+
+[status]
+	branch = true
+	showStash = true
+
+[alias]
+	lg   = log --oneline --graph --decorate --all
+	undo = reset HEAD~1 --mixed
+	st   = status
+	co   = checkout
+	br   = branch
