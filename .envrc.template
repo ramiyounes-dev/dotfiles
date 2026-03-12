@@ -1,0 +1,28 @@
+# Per-project environment variables
+# Copy to your project root, customize, then run: direnv allow
+# NEVER commit this file with real secrets — add .envrc to .gitignore
+
+# Runtime
+export ENV="development"
+export PORT="8000"
+export LOG_LEVEL="debug"
+export DEBUG="true"
+
+# Database
+export DATABASE_URL="postgres://localhost:5432/mydb"
+export DATABASE_MAX_CONNECTIONS="10"
+
+# Redis
+export REDIS_URL="redis://localhost:6379"
+
+# Auth / API keys — put real values in .envrc.local (gitignored)
+export API_KEY=""
+export SECRET_KEY=""
+export JWT_SECRET=""
+
+# AWS (uncomment as needed)
+# export AWS_PROFILE="dev"
+# export AWS_REGION="us-east-1"
+
+# Source local overrides if present
+[ -f .envrc.local ] && source .envrc.local
