@@ -1,0 +1,63 @@
+# Rami Younes - Starship Prompt Configuration
+# https://starship.rs/config/
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$python\
+$nodejs\
+$java\
+$cmd_duration\
+$line_break\
+$character"""
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold yellow)"
+
+[directory]
+style = "bold blue"
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+style = "bold red"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+modified = "!${count}"
+untracked = "?${count}"
+staged = "+${count}"
+deleted = "✘${count}"
+
+[python]
+symbol = " "
+style = "bold yellow"
+format = '[$symbol$version]($style) '
+detect_files = ["requirements.txt", "pyproject.toml", ".python-version"]
+
+[nodejs]
+symbol = " "
+style = "bold green"
+format = '[$symbol$version]($style) '
+detect_files = ["package.json"]
+
+[java]
+symbol = " "
+style = "bold red"
+format = '[$symbol$version]($style) '
+detect_files = ["pom.xml", "build.gradle", ".java-version"]
+
+[cmd_duration]
+min_time = 2000
+format = "took [$duration](bold yellow)"
+
+[fill]
+symbol = " "
