@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Backups (created by link.sh)
+*.backup.*
+
+# Secrets — never commit these
+.env
+.envrc.local
+secrets/
+*.pem
+*.key
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Misc
+.direnv/
