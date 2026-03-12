@@ -85,3 +85,4 @@ port() { lsof -i ":$1"; }
 
 # Show PATH entries one per line
 path() { echo "$PATH" | tr ':' '\n'; }
+export PATH="$HOME/.local/bin:$PATH"
